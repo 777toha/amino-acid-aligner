@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, Container, Typography } from '@mui/material';
+import AminoAcidAligner from './AminoAcidAligner';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Typography variant="h5" component="h1" gutterBottom align="center" mb="50px">
+          Визуализатор выравнивания аминокислотных последовательностей
+        </Typography>
+        <AminoAcidAligner />
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
